@@ -1,6 +1,7 @@
 const calendar_urls = [
-    "https://calendar.google.com/calendar/ical/c_d99a3853cc33e69154edf760533cda24fbb4596dbe4b442742617a53cfe015a2%40group.calendar.google.com/public/basic.ics",
-    "https://calendar.google.com/calendar/ical/c_d9cfda41f328ef6ca626a71f31b42fceaea34c8ab2284329e1bd8cbd45d12f68%40group.calendar.google.com/public/basic.ics",
+    "https://calendar.google.com/calendar/ical/c_d99a3853cc33e69154edf760533cda24fbb4596dbe4b442742617a53cfe015a2%40group.calendar.google.com/public/basic.ics", // Studio 1
+    "https://calendar.google.com/calendar/ical/c_d9cfda41f328ef6ca626a71f31b42fceaea34c8ab2284329e1bd8cbd45d12f68%40group.calendar.google.com/public/basic.ics", // Studio 2
+    // "https://calendar.google.com/calendar/ical/c_c1e51a1ddf6e5142d6df842036c06edd01619f633e3cdf6ba488055905dabdac%40group.calendar.google.com/public/basic.ics", // Test Calendar
 ];
 const day_strings = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 const studio_opens = new Date();
@@ -93,11 +94,12 @@ async function getCalendar() {
 
     let current = new Date(studio_opens);
 
-    while (current <= studio_closes) {
+    while (current < studio_closes) {
         const row = document.createElement('tr');
 
         const date_element = document.createElement('td');
         date_element.innerText = `${current.getHours().toString().padStart(2, '0')}:${current.getMinutes().toString().padStart(2, '0')}`;
+        date_element.className = 'cal-time';
         row.appendChild(date_element);
 
         for (let i = 0; i < 3; i++) {

@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;700&family=Passion+One:wght@400;700&display=swap');
+
+:root {
+  --pureDarkBlue: #192A3D;
+  --pureBlue: #009FE3;
+  --purePurple: #912191;
+  --pureBlack: #000000;
+  --pureWhite: #FFFFFF;
+
+  --availableColour: #219121;
+  --unavailableColour: #912121;
+  --closedColour: #808080;
+
+  --backgroundColour: #121212;
+}
+
+body {
+  background-color: var(--backgroundColour);
+  color: var(--pureWhite);
+
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.centre-children {
+  margin: auto;
+  margin-bottom: 5vh;
+  width: fit-content;
+  text-align: center;
+}
+
+#logo {
+  margin: 5vw 10vw 0 10vw;
+  width: 80vw;
+}
+
+#clock {
+  margin: 0;
+  font-size: 8em;
+}
+
+#studio-availability {
+  margin: 0;
+  font-size: 3em;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#grid-container section {
+  padding: 1em;
+}
+
+#cal-table {
+  width: 100%;
+  height: 100%;
+  border-collapse: collapse;
+}
+
+#cal-table td {
+  text-align: right;
+  line-height: 2em;
+  border: 1px solid;
+  border-color: var(--backgroundColour);
+}
+
+.cal-time {
+  padding-right: 1em;
+}
+.cal-free {
+  background-color: var(--availableColour);
+}
+.cal-busy {
+  background-color: var(--unavailableColour);
+}
+.cal-closed {
+  background-color: var(--closedColour);
+}

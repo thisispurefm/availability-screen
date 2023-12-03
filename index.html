@@ -2,23 +2,24 @@
 <head>
   <title>PureFM Availability Screen</title>
 
-  <style>
-    .cal-free {
-      background-color: #00FF00;
-    }
-    .cal-busy {
-      background-color: #FF0000;
-    }
-    .cal-closed {
-      background-color: #808080;
-    }
-  </style>
-
+  <link rel="stylesheet" href="calendar.css">
   <script src="calendar.js"></script>
 </head>
 <body onload="initialise()">
-  <h2 id="clock">00:00:00</h2>
-  <h2 id="studio-name"></h2>
-  <h2 id="cal-available"></h2>
-  <table id="cal-table"></table>
+  <img id="logo" src="assets/purefm-logo.png" alt="PureFM logo">
+
+  <div class="centre-children">
+    <h2 id="clock">00:00:00</h2>
+    <h2 id="studio-availability"><span id="studio-name">Studio</span>: <span id="cal-available">Studio Closed</span></h2>
+  </div>
+
+  <div id="grid-container">  
+    <section id="nb-section">
+      <h2>Notice board goes here at some point :)</h2>
+    </section>
+
+    <section id="cal-section">
+      <table id="cal-table"></table>
+    </section>
+  </div>
 </body>
