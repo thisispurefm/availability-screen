@@ -147,5 +147,10 @@ function initialise() {
     getCalendar();
 }
 
+function reloadPage() {
+    location.reload();
+}
+
 setInterval(getCalendar, 30 * 1000);
 setInterval(setClock, 500);
+setInterval(reloadPage, 24 * 60 * 60 * 1000); // Reload page every 24 hours to get updates

@@ -19,11 +19,13 @@ body {
   color: var(--pureWhite);
 
   font-family: 'Noto Sans', sans-serif;
+
+  overflow: hidden;
 }
 
 .centre-children {
   margin: auto;
-  margin-bottom: 5vh;
+  margin-bottom: 1vh;
   width: fit-content;
   text-align: center;
 }
@@ -60,7 +62,7 @@ body {
 
 #cal-table td {
   text-align: right;
-  line-height: 2em;
+  line-height: 1.75em;
   border: 1px solid;
   border-color: var(--backgroundColour);
 }
